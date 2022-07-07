@@ -31,6 +31,6 @@ class SubjectController extends Controller
         if (Auth::check()) {
             return view('mainpage', ['listSubject' => Subject::all()]);
             }
-            return redirect("mainpage")->withSuccess('You do not have access');
+            return redirect("login")->withSuccess('You do not have access');
     }
 }
